@@ -18,7 +18,8 @@ module.exports = {
 
   // preprocess *.svelte files with svelte-processor (configured via svelte.config.js)
   transform: {
-    "^.+\\.svelte$": ["svelte-jester", { preprocess: true }]
+    "^.+\\.svelte$": ["svelte-jester", { preprocess: true }],
+    "\\.(png|svg|jpg|gif)$": "<rootDir>/mocks/images.js"
   },
 
   // support importing *.js, *.ts and *.svelte files in tests

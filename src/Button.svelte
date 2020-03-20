@@ -12,6 +12,6 @@
 
 <h1>Hello {name}!</h1>
 
-<img src={logo} alt="some image" />
+<img src={logo} alt="the logo" />
 
 <button on:click="{handleClick}">{buttonText}</button>

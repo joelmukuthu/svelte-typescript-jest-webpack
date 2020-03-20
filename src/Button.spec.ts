@@ -11,6 +11,12 @@ it('shows proper heading when rendered', () => {
   expect(getByText('Hello World!')).toBeInTheDocument()
 })
 
+it('loads an image', () => {
+  const { getByAltText } = render(Button, { name: 'World' })
+
+  expect(getByAltText('the logo')).toBeInTheDocument()
+})
+
 // Note: This is as an async test as we are using `fireEvent`
 it('changes button text on click', async () => {
   const { getByText } = render(Button, { name: 'World' })
