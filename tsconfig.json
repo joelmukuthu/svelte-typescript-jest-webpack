@@ -1,6 +1,10 @@
 {
   "compilerOptions": {
     "strict": true,
-    "noEmitOnError": true
+    "noEmitOnError": true,
+    "typeRoots": [
+      "node_modules/@types",
+      "types"
+    ]
   }
 }
