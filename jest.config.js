@@ -11,9 +11,9 @@ module.exports = {
   // preprocess *.ts test files with ts-jest
   preset: 'ts-jest',
 
-  // include *.spec.ts and *.spec.js files
+  // look for tests in *.spec.ts files
   testMatch: [
-    '**/*.spec.{ts,js}'
+    '**/*.spec.ts'
   ],
 
   // preprocess *.svelte files with svelte-processor (configured via svelte.config.js)
@@ -21,7 +21,7 @@ module.exports = {
     "^.+\\.svelte$": ["svelte-jester", { preprocess: true }]
   },
 
-  // support *.js, *.ts and *.svelte files in tests
+  // support importing *.js, *.ts and *.svelte files in tests
   moduleFileExtensions: ["js", "ts", "svelte"],
 
   setupFilesAfterEnv: ["@testing-library/jest-dom/extend-expect"],
