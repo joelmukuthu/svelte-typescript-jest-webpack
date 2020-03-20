@@ -4,8 +4,7 @@
   let buttonText: string = 'Button'
 
   function handleClick() {
-    // trigger a TS error:
-    buttonText = 1
+    buttonText = 'Button Clicked'
   }
 </script>
 
