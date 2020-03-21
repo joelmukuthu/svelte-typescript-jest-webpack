@@ -8,12 +8,17 @@ module.exports = {
   // The directory where Jest should output its coverage files
   coverageDirectory: "coverage",
 
+  // Only cover *.svelte files
+  collectCoverageFrom: [
+    '<rootDir>/src/**/*.svelte'
+  ],
+
   // preprocess *.ts test files with ts-jest
   preset: 'ts-jest',
 
   // look for tests in *.spec.ts files
   testMatch: [
-    '**/*.spec.ts'
+    '<rootDir>/src/**/*.spec.ts'
   ],
 
   // preprocess *.svelte files with svelte-processor (configured via svelte.config.js)
