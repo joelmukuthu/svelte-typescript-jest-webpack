@@ -1,4 +1,5 @@
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 const path = require('path');
 const {preprocess} = require('./svelte.config')
 
@@ -14,7 +15,8 @@ module.exports = {
 			svelte: path.resolve('node_modules', 'svelte')
 		},
 		extensions: ['.mjs', '.js', '.svelte'],
-		mainFields: ['svelte', 'browser', 'module', 'main']
+		mainFields: ['svelte', 'browser', 'module', 'main'],
+		plugins: [new TsconfigPathsPlugin()]
 	},
 	output: {
 		path: __dirname + '/public',
