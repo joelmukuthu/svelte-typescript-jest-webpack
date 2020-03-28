@@ -1,7 +1,11 @@
 {
   "compilerOptions": {
     "strict": true,
-    "noEmitOnError": true,
+    // "noEmitOnError": true,
+    // `noUnusedLocals` doesn't work when typescript in .svelte files is
+    // preprocessed (via svelte-preprocess). TS is not aware that the variables
+    // are used in svelte's HTML
+    // "noUnusedLocals": true,
     "typeRoots": [
       "./node_modules/@types",
       "./types"
